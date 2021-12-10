@@ -1,0 +1,69 @@
+<ion-app >
+  <ion-content>
+    <form [formGroup]="registerForm" >
+      <ion-grid >
+        <ion-row>
+          <ion-col class="ion-text-center ion-padding ion-margin">
+            <ion-icon   color="tertiary" name="person" size="large"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-text-center">
+            <ion-title color="tertiary">SIGN UP</ion-title>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-margin">
+            <ion-item >
+              <ion-label for="user"  color="medium" position="floating" >
+                  <small>USER</small>
+              </ion-label>
+              
+              <ion-input id="user"  name="user" formControlName="user" color="medium" type="text"></ion-input>
+          
+            </ion-item>
+            <ion-item >
+                <ion-label for="email" color="medium" position="floating" >
+                  <small>EMAIL</small>
+                </ion-label>
+                <ion-input name="email" id="email" formControlName="email" color="medium" type="email"></ion-input>
+               
+            </ion-item>
+            <ion-item>
+              <ion-label for="password" color="medium" position="floating">
+                <small>PASSWORD</small>
+              </ion-label>
+              <ion-input name="password"  id="password" formControlName="password" type="password"></ion-input> 
+              
+            </ion-item>
+            <ion-item>
+              <ion-label for="confirmPassword"  color="medium" position="floating">
+                <small>CONFIRM PASSWORD</small>
+              </ion-label>
+              
+              <ion-input name="confirmPassword" id="confirmPassword" formControlName="confirmPassword" type="password" ></ion-input>
+            </ion-item>
+            
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <div class="ion-alert">
+            <p color="warning">{{message}}</p>
+          </div>
+        </ion-row>
+       
+        <ion-row>
+          <ion-col>
+            <ion-button expand="full" (click)="createNewAccount()"  shape="round"  color="tertiary">CREATE</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col>
+            <ion-button expand="full"
+            [routerLink]="['/sign-in']"
+            fill="outline"
+            shape="round"  color="tertiary">LOGIN</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>
+</ion-app>

@@ -1,0 +1,67 @@
+<ion-app >
+  <ion-content>
+    <form [formGroup]="formContact">
+      <ion-grid >
+        <ion-row>
+          <ion-col class="ion-text-center ion-padding ion-margin">
+            <ion-icon   color="tertiary" name="list" size="large"></ion-icon>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-text-center">
+            <ion-title color="tertiary">REGISTER</ion-title>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-margin">
+            <ion-item >
+              <ion-label  color="medium" position="floating" >
+                  <small>FULLNAME</small>
+              </ion-label>
+              <ion-input  color="medium" formControlName="fullName" type="text"></ion-input>
+          </ion-item>
+            <ion-item >
+                <ion-label  color="medium" position="floating" >
+                  <small>EMAIL</small>
+                </ion-label>
+                <ion-input  color="medium" formControlName="email" type="email"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="medium" position="floating">
+                <small>PHONE NUMBER</small>
+              </ion-label>
+              <ion-input  formControlName="phoneNumber" type="number"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="medium" position="floating">
+                <small>HOME</small>
+              </ion-label>
+              <ion-input type="number"formControlName="home"></ion-input>
+            </ion-item>
+            <ion-item>
+   
+              <ion-item>
+                <ion-label  color="medium" position="floating"><small>DAY OF BIRTH</small></ion-label>
+                <ion-datetime formControlName="dayOfBirth" display-format="DD-MM-YYYY"></ion-datetime>
+              </ion-item>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <p class="ion-text-center">{{message}}</p>
+        </ion-row>
+        <ion-row >
+          <ion-col>
+            <ion-button
+           expand="full" shape="round" (click)="createNewContact()"  color="danger">CREATE</ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row >
+          <ion-col>
+            <ion-button
+            [routerLink]="['/contacts']" expand="full" shape="round"  color="tertiary">BACK</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+  </ion-content>
+</ion-app>
