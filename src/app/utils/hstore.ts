@@ -1,3 +1,4 @@
+import { computeStackId } from "@ionic/angular/directives/navigation/stack-utils";
 import { Contact } from "../models/contact";
 
 export class HStore {
@@ -23,6 +24,7 @@ export class HStore {
 
         while(tempContact = localStorage.getItem("contact"+contact)){
             contact++;
+            console.log(tempContact);
             contacts.push(JSON.parse(tempContact));
         }
         console.log(contacts);

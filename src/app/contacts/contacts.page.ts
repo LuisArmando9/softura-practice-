@@ -12,7 +12,7 @@ export class ContactsPage implements OnInit {
    * 
    * get all contact that store in localstorage for show in ion-list
    */
-  contacts = HStore.getAllContacts();
+  contacts:Contact[];
   constructor() 
   {
     
@@ -20,6 +20,7 @@ export class ContactsPage implements OnInit {
   }
 
   ngOnInit() { 
+    this.contacts = HStore.getAllContacts();
   }
 
 }
