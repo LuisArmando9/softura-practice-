@@ -1,0 +1,7 @@
+{
+  "name": "softura_practice",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
