@@ -22,9 +22,17 @@ export class SignUpPage implements OnInit {
   constructor(private route: Router) { 
    
   }
+  /**
+   * 
+   * @returns boolean check if the passwords are valid
+   */
   private isValidPassword():boolean{
     return this.registerForm.value.password == this.registerForm.value.confirmPassword;
   }
+   /**
+   * 
+   * creating new form for validate
+   */
   createForm(){
     this.registerForm = new FormGroup({
       user: new FormControl('', [Validators.required, Validators.min(3), Validators.max(255) ]),
@@ -38,12 +46,18 @@ export class SignUpPage implements OnInit {
     this.createForm();
     
   }
+  /**
+   * step up object for user and add it to local storage
+   */
   private setUserCredentials(){
         this.user.user = this.registerForm.value.user;
         this.user.password = this.registerForm.value.password;
         this.user.email =this.registerForm.value.email;
         localStorage.setItem("user", JSON.stringify(this.user) );
   }
+  /**
+   * valid the from and create new account in local storage
+   */
  createNewAccount(){
     if(this.registerForm.valid)
     {

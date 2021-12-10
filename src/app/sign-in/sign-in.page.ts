@@ -11,6 +11,10 @@ import { FormGroup,  Validators, FormControl } from '@angular/forms';
 export class SignInPage implements OnInit {
   signInForm:FormGroup; 
   message:string;
+   /**
+   * 
+   *create new for for validating
+   */
   createSignInForm(){
     this.signInForm =  new FormGroup({
       email:new FormControl('', [Validators.required, Validators.email]),
@@ -24,7 +28,10 @@ export class SignInPage implements OnInit {
   ngOnInit() {
     this.createSignInForm();
   }
-
+   /**
+   * 
+   * @returns boolean check if the creadentials are valid
+   */
   private areCorrectCredentials():boolean{
     const user = JSON.parse(localStorage.getItem('user'));
     if(user){
@@ -34,6 +41,10 @@ export class SignInPage implements OnInit {
     }
     return false;
   }
+   /**
+   * 
+   * creating new session and redirec to contacts
+   */
   login(){
     const user = JSON.parse(localStorage.getItem('user'));
     if(this.signInForm.valid){

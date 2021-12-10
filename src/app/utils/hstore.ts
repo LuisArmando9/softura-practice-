@@ -1,4 +1,8 @@
 export class HStore {
+    /**
+     * 
+     * @returns last id to contact that was inset at local storage
+     */
     public static getLastIdConcatInsert(){
         let contact = 0;
         while(localStorage.getItem("contact"+contact)){
@@ -6,6 +10,10 @@ export class HStore {
         }
         return contact;
     }
+     /**
+     * 
+     * @returns last all contacts that was registred in local storage fow showing
+     */
     public static getAllContacts(){
         let contact = 0;
         let contacts = [];

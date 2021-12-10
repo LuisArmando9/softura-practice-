@@ -12,6 +12,10 @@ import { HStore } from '../utils/hstore';
 export class ContactRegisterPage implements OnInit {
   formContact:FormGroup;
   message:string;
+   /**
+   * 
+   * creat a new form and add validate for it
+   */
   createFormContact(){
     this.formContact = new FormGroup({
       fullName: new FormControl('', [Validators.required]),
@@ -26,6 +30,10 @@ export class ContactRegisterPage implements OnInit {
   ngOnInit() {
     this.createFormContact();
   }
+   /**
+   * 
+   * creat a new contact
+   */
   createNewContact(){
     if(this.formContact.valid){
         let lastContact = HStore.getLastIdConcatInsert();

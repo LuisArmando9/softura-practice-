@@ -8,6 +8,10 @@ import { HStore } from '../utils/hstore';
   styleUrls: ['./contacts.page.scss'],
 })
 export class ContactsPage implements OnInit {
+   /**
+   * 
+   * get all contact that store in localstorage for show in ion-list
+   */
   contacts = HStore.getAllContacts();
   constructor() 
   {
