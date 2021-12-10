@@ -1,3 +1,5 @@
+import { Contact } from "../models/contact";
+
 export class HStore {
     /**
      * 
@@ -26,5 +28,12 @@ export class HStore {
         console.log(contacts);
         return contacts;
 
+    }
+     /**
+     * 
+     * @returns contact specify at localstore
+     */
+      public static getContact(id:number):Contact{
+        return JSON.parse(localStorage.getItem("contact"+id));
     }
 }
