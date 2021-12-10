@@ -37,8 +37,9 @@ export class ContactRegisterPage implements OnInit {
   createNewContact(){
     if(this.formContact.valid){
         let lastContact = HStore.getLastIdConcatInsert();
-        
-        localStorage.setItem("contact"+lastContact, JSON.stringify(this.formContact.value));
+        let newContact = this.formContact.value;
+        newContact.id = lastContact;
+        localStorage.setItem("contact"+lastContact, JSON.stringify(newContact));
         this.route.navigate(['/contacts']);
     }else{
       this.message = "Campos invalidos";

@@ -17,6 +17,7 @@ export class ContactProfilePage implements OnInit {
     home:Constants.EMPTY_STRING,
     email:Constants.EMPTY_STRING,
     dayOfBirth:Constants.EMPTY_STRING,
+    id:0
     
   };
   constructor(private activeRoute: ActivatedRoute) 

@@ -4,5 +4,5 @@ export interface Contact {
     phoneNumber:string,
     email:string,
     dayOfBirth:string
-    
+    id:number
 }

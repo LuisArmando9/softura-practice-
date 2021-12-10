@@ -7,7 +7,7 @@
     <section class="ion-padding">
        <ion-title color="medium" class="ion-text-center">CONTACTOS</ion-title>
        <ion-list>
-         <ion-item *ngFor="let contact of contacts"  >
+         <ion-item *ngFor="let contact of contacts"  [routerLink]="['/contact', contact.id]">
             <ion-avatar class="ion-text-center ion-margin">
               <ion-icon name="person" color="primary"></ion-icon>
             </ion-avatar>
