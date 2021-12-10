@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "softura_practice",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
